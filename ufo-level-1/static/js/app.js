@@ -14,13 +14,13 @@ var table = d3.select("#ufo-table>tbody");
 shapeSet = new Set();
 _tableData.forEach(function(entry) {
     Object.entries(entry).forEach(([key, value]) => {
-        console.log(key);
         if (key == "shape") {
             shapeSet.add(value);
         }
 })});
-shapeElem = d3.select("#shape");
-shapeElem.append("option").property("selected","selected").text("--None--");
+// create shape options list
+let shapeElem = d3.select("#shape");
+shapeElem.append("option").property("selected","selected").text("");
 shapeSet.forEach(shape => shapeElem.append("option").property("value", shape).text(shape));
 
 // table creation function
@@ -47,7 +47,7 @@ function filter() {
 
     // filter based on user inputs
     _inputIDs.forEach(function(id){
-        userInput = d3.select(`#${id}`).property("value");
+        let userInput = d3.select(`#${id}`).property("value");
         if (userInput !== "") {
             filteredTable = filteredTable.filter(entry => entry[id] === userInput.toLowerCase());
         }
