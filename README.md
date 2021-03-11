@@ -11,4 +11,4 @@ That's why we are hiring you. We need you to write code that will create a table
 You can handle this... right? The planet Earth needs to know what we have found!
 
 ## Timeline
-This project will be finished on or before Mar 10, 2021 and will likely not have many updates afterward.
+This project will likely not have many updates going forward.
